@@ -386,7 +386,7 @@ class EmotionMusicApp(QMainWindow):  # Changed from QWidget to QMainWindow
     
     def detect_emotion(self, frame):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/haarcascade_frontalface_default.xml")
         if face_cascade.empty():
             QMessageBox.critical(self, "Error", "Haar Cascade file not found!")
             return
