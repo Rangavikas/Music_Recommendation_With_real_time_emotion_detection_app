@@ -91,7 +91,7 @@ class EmotionMusicApp(QMainWindow):  # Changed from QWidget to QMainWindow
         self.setGeometry(100, 100, 1000, 800)
 
         # Set background image
-        self.set_background("D:\\downloads\\wallpaperflare.com_wallpaper.jpg")
+        self.set_background("https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/wallpaperflare.com_wallpaper.jpg")
         
         # Create a central widget
         central_widget = QWidget()
