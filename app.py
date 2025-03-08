@@ -17,7 +17,7 @@ import vlc  # Use VLC for media playback
 logging.basicConfig(filename="app.log", level=logging.ERROR)
 
 # Load pre-trained emotion detection model
-model_path = "emotion_model.h5"
+model_path = "https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/emotion_model.h5"
 if not os.path.exists(model_path):
     logging.error(f"Model file '{model_path}' not found!")
     exit()
