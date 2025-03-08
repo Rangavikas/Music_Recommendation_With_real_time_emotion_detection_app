@@ -24,7 +24,7 @@ if not os.path.exists(model_path):
 model = load_model(model_path)
 
 # Path to the folder containing emotion subfolders
-music_folder = os.path.join("Emotion_music")
+music_folder = os.path.join("https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/tree/main/Emotion_music")
 if not os.path.exists(music_folder):
     logging.error(f"Music folder '{music_folder}' not found!")
     exit()
