@@ -17,14 +17,14 @@ import vlc  # Use VLC for media playback
 logging.basicConfig(filename="app.log", level=logging.ERROR)
 
 # Load pre-trained emotion detection model
-model_path = "https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/emotion_model.h5"
+model_path = "emotion_model.h5"
 if not os.path.exists(model_path):
     logging.error(f"Model file '{model_path}' not found!")
     exit()
 model = load_model(model_path)
 
 # Path to the folder containing emotion subfolders
-music_folder = os.path.join("https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/tree/main/Emotion_music")
+music_folder = os.path.join("Emotion_music")
 if not os.path.exists(music_folder):
     logging.error(f"Music folder '{music_folder}' not found!")
     exit()
@@ -91,7 +91,7 @@ class EmotionMusicApp(QMainWindow):  # Changed from QWidget to QMainWindow
         self.setGeometry(100, 100, 1000, 800)
 
         # Set background image
-        self.set_background("https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/wallpaperflare.com_wallpaper.jpg")
+        self.set_background("D:\\downloads\\wallpaperflare.com_wallpaper.jpg")
         
         # Create a central widget
         central_widget = QWidget()
@@ -386,7 +386,7 @@ class EmotionMusicApp(QMainWindow):  # Changed from QWidget to QMainWindow
     
     def detect_emotion(self, frame):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "https://github.com/Rangavikas/Music_Recommendation_With_real_time_emotion_detection_app/blob/main/haarcascade_frontalface_default.xml")
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
         if face_cascade.empty():
             QMessageBox.critical(self, "Error", "Haar Cascade file not found!")
             return
